@@ -8,6 +8,8 @@ Create a user account to save your favorite recipes and create your own recipes
 Rate and review recipes, and see what other users think of them
 Share your recipes with the community and get feedback from other users
 Responsive design that works well on desktop and mobile devices
+Added a API so you can search for any recipe
+Added a rating system so user can give the recipe whatever rating they like
 Technologies Used
 Html
 Css
