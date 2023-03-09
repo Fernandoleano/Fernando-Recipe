@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fernando Recipe</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header>
@@ -36,18 +37,39 @@
         <img src="https://www.allrecipes.com/thmb/DdduEBodWBxnBvWDY1vPydEABTg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/One-Pan-Chicken-Pasta-Romano-4x3-1-2000-8de21961bb3a4a5abd6eaa3c9c7668df.jpg" alt="One-Pan Tomato & Spinach Chicken Pasta">
         <h4>Recipe 1</h4>
         <p>Our version of an Italian classic uses just one skillet and takes just 40 minutes to prepare! Savory Swanson Chicken Broth, red wine, and tomatoes create a flavorful simmering sauce for the chicken and pasta ensuring a restaurant-quality dish you will both enjoy!</p>
+        <div class="rating" id="rating-2">
+            <i class="fa fa-star" data-rating="1"></i>
+            <i class="fa fa-star" data-rating="2"></i>
+            <i class="fa fa-star" data-rating="3"></i>
+            <i class="fa fa-star" data-rating="4"></i>
+            <i class="fa fa-star" data-rating="5"></i>
+          </div>
         <button><a href="recipes.html" class="read-more-button">Read More</a></button> 
       </div>
       <div class="recipe-card">
         <img src="https://www.allrecipes.com/thmb/SYfCBe1aoGrFqcCzIyMzVoHHP3M=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/9369401-0d7db61aaca744cf8ad992ed893f9738.jpg" alt="Easy One-Pot Ground Turkey Pasta">
         <h4>Recipe 2</h4>
         <p>This is a quick and easy one-pot main dish meal. Substitute your favorite ground meat, broth, spices, and pasta shape. For those who want an easy meal or those beginning to cook - this is for you.</p>
+        <div class="rating" id="rating-2">
+            <i class="fa fa-star" data-rating="1"></i>
+            <i class="fa fa-star" data-rating="2"></i>
+            <i class="fa fa-star" data-rating="3"></i>
+            <i class="fa fa-star" data-rating="4"></i>
+            <i class="fa fa-star" data-rating="5"></i>
+          </div>
         <button><a href="recipes.html" class="read-more-button">Read More</a></button>
       </div>
       <div class="recipe-card">
         <img src="https://www.allrecipes.com/thmb/pGsmQsqfEB4NbxYkHJV-y7mh7kE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/worlds-best-lasagna-527ff2a9ec754524abbbc9e5250b8040.jpeg" alt="World's Best Lasagna">
         <h4>Recipe 3</h4>
         <p>This lasagna recipe takes a little work, but it is so satisfying and filling that it's worth it!</p>
+        <div class="rating">
+            <i class="fa fa-star" data-rating="1"></i>
+            <i class="fa fa-star" data-rating="2"></i>
+            <i class="fa fa-star" data-rating="3"></i>
+            <i class="fa fa-star" data-rating="4"></i>
+            <i class="fa fa-star" data-rating="5"></i>
+          </div>
         <button><a href="#" class="read-more-button">Read More</a></button>
       </div>
     </div>
@@ -79,5 +101,61 @@
     </div>
   </section>
 
-  <footer>
-    <p
+  <footer class="follow-us">
+    <div class="follow-us-container">
+      <div class="follow-us-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script>
+// Select all rating containers
+const ratingContainers = document.querySelectorAll('.rating');
+
+// Loop through each container
+ratingContainers.forEach(container => {
+  const ratingStars = container.querySelectorAll('i');
+  const recipeID = container.getAttribute('data-recipe-id'); // Replace with the actual recipe ID
+
+  // Set the initial rating stars
+  let rating = 3; // Replace with the actual rating value from the database
+  for (let i = 0; i < rating; i++) {
+    ratingStars[i].classList.add('active');
+  }
+
+  // Add click event listeners to the rating stars
+  ratingStars.forEach(star => {
+    star.addEventListener('click', () => {
+      const rating = star.getAttribute('data-rating');
+      updateRating(rating, container);
+    });
+  });
+
+  // Update the rating in the database
+  function updateRating(rating, container) {
+    // Update the database with the new rating value
+    // ...
+
+    // Update the active rating stars
+    const ratingStars = container.querySelectorAll('i');
+    if (ratingStars && ratingStars.length > 0) {
+      ratingStars.forEach(star => {
+        star.classList.remove('active');
+      });
+      for (let i = 0; i < rating; i++) {
+        ratingStars[i].classList.add('active');
+      }
+    } else {
+      console.error('Error: ratingStars is not defined or empty');
+    }
+  }
+});
+    </script>
+</body>
+</html>
