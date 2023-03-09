@@ -29,6 +29,7 @@ Thank you for checking out my recipe app! If you have any questions or feedback,
 Link to play with the site: https://fernando-recipe.vercel.app/
 
 ![image](https://user-images.githubusercontent.com/68082556/223865444-8dc1549b-8d3d-41e6-b060-3ed5b03d2205.png)
+![image](https://user-images.githubusercontent.com/68082556/223901483-45899977-d8f3-466e-abc0-573283bf47dc.png)
 ![image](https://user-images.githubusercontent.com/68082556/223865490-0c2c5df4-b62b-41a5-9def-c629f0f17a72.png)
 ![image](https://user-images.githubusercontent.com/68082556/223865534-96674d50-0bd0-4b07-891f-9b353831382a.png)
 ![image](https://user-images.githubusercontent.com/68082556/223865575-f6eb326f-2344-46be-bb05-269d5e25a0e6.png)
