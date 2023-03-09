@@ -108,6 +108,26 @@ button:hover {
 	margin-bottom: 20px;
 }
 
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+  .rating i {
+    font-size: 1.5rem;
+    color: #c4c4c4;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0 5px;
+}
+  
+  .rating i:hover,
+  .rating i.active {
+    color: gold;
+}
+
 .recipe-cards {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -196,6 +216,60 @@ button:hover {
 	background-color: #c039;
 }
 
+.follow-us {
+	background-color: #222;
+	color: #fff;
+	padding: 50px 0;
+	font-family: Arial, sans-serif;
+  }
+  
+  .follow-us-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  .follow-us-column {
+	width: calc(50% - 10px);
+	margin-bottom: 20px;
+  }
+  
+  .follow-us h3 {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+  }
+  
+  .social-icons {
+	display: flex;
+	justify-content: center;
+  }
+  
+  .social-icons a {
+	display: inline-block;
+	color: #fff;
+	font-size: 2rem;
+	margin-right: 20px;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .social-icons a:last-child {
+	margin-right: 0;
+  }
+  
+  .social-icons a:hover {
+	color: #ffcd01;
+	transform: translateY(-5px);
+  }
+  
+  .follow-us p {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	line-height: 1.5;
+  }
+
 @media screen and (max-width: 768px) {
 	/* Header styles */
 	.logo {
@@ -249,4 +323,13 @@ button:hover {
 		font-size: 16px;
 		padding: 8px 16px;
 	}
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1c40f;
 }
