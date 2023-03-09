@@ -33,6 +33,6 @@ Link to play with the site: https://fernando-recipe.vercel.app/
 ![image](https://user-images.githubusercontent.com/68082556/223865444-8dc1549b-8d3d-41e6-b060-3ed5b03d2205.png)
 ![image](https://user-images.githubusercontent.com/68082556/223901483-45899977-d8f3-466e-abc0-573283bf47dc.png)
 ![image](https://user-images.githubusercontent.com/68082556/223901570-59cf4a2b-bb13-4114-a4f6-8caa388a6b77.png)
-![image](https://user-images.githubusercontent.com/68082556/223901682-aee6df21-79e7-4ffd-8834-e855e6245c6a.png)
+![image](https://user-images.githubusercontent.com/68082556/223904530-42d611f8-4fa8-416d-9e04-4a95d8b8d3f0.png)
 ![image](https://user-images.githubusercontent.com/68082556/223865575-f6eb326f-2344-46be-bb05-269d5e25a0e6.png)
 ![image](https://user-images.githubusercontent.com/68082556/223865598-c11265fb-62b4-4142-adec-9f7a3fb2bf5e.png)
