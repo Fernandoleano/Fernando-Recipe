@@ -1,0 +1,151 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+  <h1>Sign In</h1>
+  <div class="form-container">
+    <form class="form">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit" id="signin-button">Sign In</button>
+    </form>
+    <div class="divider"></div>
+    <button id="google-signin-button">Sign In with Google</button>
+    <div class="divider"></div>
+    <button class="signup-button" onclick="location.href='signup.html'">Sign Up</button>
+  </div>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCysG4FlOGt4y4RKTqT-enNBuQLhjZZGZA",
+          authDomain: "fernando-recipe-login.firebaseapp.com",
+          projectId: "fernando-recipe-login",
+          storageBucket: "fernando-recipe-login.appspot.com",
+          messagingSenderId: "756522409149",
+          appId: "1:756522409149:web:0c0730dc6bb7b6e24aebd4",
+          measurementId: "G-BLNF3LF877"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const signinForm = document.querySelector(".form");
+    const googleSigninButton = document.querySelector("#google-signin-button");
+
+    signinForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Sign in successful, redirect to home page
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          // Handle sign-in errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(`Error: ${errorCode} ${errorMessage}`);
+        });
+    });
+
+    googleSigninButton.addEventListener("click", () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+          // Sign in successful, redirect to home page
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          // Handle sign-in errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(`Error: ${errorCode} ${errorMessage}`);
+        });
+    });
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+  <div class="login-form">
+    <form class="form">
+      <h2>Sign In</h2>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Sign In</button>
+      <div class="signup-container">
+        <p>New to our site? <a href="signup.html">Sign Up</a></p>
+        <button class="google-btn" type="button">Sign In with Google</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+          apiKey: "AIzaSyCysG4FlOGt4y4RKTqT-enNBuQLhjZZGZA",
+          authDomain: "fernando-recipe-login.firebaseapp.com",
+          projectId: "fernando-recipe-login",
+          storageBucket: "fernando-recipe-login.appspot.com",
+          messagingSenderId: "756522409149",
+          appId: "1:756522409149:web:0c0730dc6bb7b6e24aebd4",
+          measurementId: "G-BLNF3LF877"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const signinForm = document.querySelector(".form");
+    const googleSigninButton = document.querySelector(".google-btn");
+
+    signinForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Sign in successful, redirect to home page
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          // Handle sign-in errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(`Error: ${errorCode} ${errorMessage}`);
+        });
+    });
+
+    googleSigninButton.addEventListener("click", () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+          // Sign in successful, redirect to home page
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          // Handle sign-in errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(`Error: ${errorCode} ${errorMessage}`);
+        });
+    });
+  </script>
+</body>
+</html>
