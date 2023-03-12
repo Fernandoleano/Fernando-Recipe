@@ -6,6 +6,13 @@
   <link rel="stylesheet" href="recipedetails.css">
 </head>
 <body>
+  <div class="switch-container">
+    <label class="mode-switch-container">
+      <input type="checkbox" id="mode-switch">
+      <label for="mode-switch" class="mode-switch-label"></label>
+    </label>
+    <span>Dark mode</span>
+  </div>
   <div class="recipe-container"></div>
   <script>
     const queryParams = new URLSearchParams(window.location.search);
@@ -15,6 +22,15 @@
     const API_URL = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${API_KEY}`;
 
     const recipeContainer = document.querySelector('.recipe-container');
+    const darkModeToggle = document.querySelector('#mode-switch');
+
+    function toggleDarkMode() {
+      if (darkModeToggle.checked) {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+    }
 
     fetch(API_URL)
       .then(response => response.json())
@@ -30,8 +46,15 @@
         summaryElement.innerHTML = data.summary;
 
         const ingredientsTitleElement = document.createElement('h2');
+        ingredientsTitleElement.textContent = 'Ingredients';
 
         const ingredientsListElement = document.createElement('ul');
+
+        data.extendedIngredients.forEach(ingredient => {
+          const ingredientElement = document.createElement('li');
+          ingredientElement.textContent = ingredient.original;
+          ingredientsListElement.appendChild(ingredientElement);
+        });
 
         const instructionsTitleElement = document.createElement('h2');
         instructionsTitleElement.textContent = 'Instructions';
@@ -50,6 +73,8 @@
       .catch(error => {
         console.error('Error fetching recipe information:', error);
       });
+
+    darkModeToggle.addEventListener('change', toggleDarkMode);
   </script>
 </body>
 </html>
