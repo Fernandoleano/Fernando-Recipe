@@ -1,6 +1,6 @@
 "# Fernando-Recipe" 
 Recipe App
-Welcome to my recipe app! This is a full-stack web application that allows users to browse and search for recipes, save their favorite recipes, and create their own recipes to share with the community. The app is built using a modern web stack, with a React front-end, a Node.js/Express back-end, and a MongoDB database.
+Welcome to my recipe app! This is a full-stack web application that allows users to browse and search for recipes, save their favorite recipes, and create their own recipes to share with the community. The app is built using a modern web stack, with a Javascript front-end, and a FireBase database.
 
 Features
 Browse and search for recipes by keyword, category, or ingredient
@@ -10,6 +10,7 @@ Share your recipes with the community and get feedback from other users
 Responsive design that works well on desktop and mobile devices
 Added a API so you can search for any recipe
 Added a rating system so user can give the recipe whatever rating they like
+Add user authentication with google sign in as well
 Technologies Used
 Html
 Css
