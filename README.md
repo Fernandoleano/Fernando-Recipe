@@ -1,4 +1,5 @@
-"# Fernando-Recipe" 
+# Fernando-Recipe
+
 Recipe App
 Welcome to my recipe app! This is a full-stack web application that allows users to browse and search for recipes, save their favorite recipes, and create their own recipes to share with the community. The app is built using a modern web stack, with a Javascript front-end, and a FireBase database.
 
