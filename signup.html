@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <div class="form-container">
+    <form class="form">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+      <button type="submit" id="signup-button">Sign Up</button>
+    </form>
+  </div>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "<your-api-key>",
+      authDomain: "<your-auth-domain>",
+      projectId: "<your-project-id>",
+      storageBucket: "<your-storage-bucket>",
+      messagingSenderId: "<your-messaging-sender-id>",
+      appId: "<your-app-id>",
+      measurementId: "<your-measurement-id>"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const signupForm = document.querySelector(".form");
+
+    signupForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+      const confirmPassword = document.querySelector("#confirm-password").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Sign up successful, redirect to home page
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          // Handle sign-up errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(`Error: ${errorCode} ${errorMessage}`);
+        });
+    });
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-form">
+        <form class="form">
+          <h2>Sign Up</h2>
+          <input type="text" placeholder="Full Name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+          <button type="submit">Sign Up</button>
+          <div class="signin-container">
+            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+          </div>
+        </form>
+      </div>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyCysG4FlOGt4y4RKTqT-enNBuQLhjZZGZA",
+          authDomain: "fernando-recipe-login.firebaseapp.com",
+          projectId: "fernando-recipe-login",
+          storageBucket: "fernando-recipe-login.appspot.com",
+          messagingSenderId: "756522409149",
+          appId: "1:756522409149:web:0c0730dc6bb7b6e24aebd4",
+          measurementId: "G-BLNF3LF877"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const signupForm = document.querySelector(".form");
+
+    signupForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+      const confirmPassword = document.querySelector("#confirm-password").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Sign up successful, redirect to home page
+          window.location.href = "signin.html";
+        })
+        .catch((error) => {
+          // Handle sign-up errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(`Error: ${errorCode} ${errorMessage}`);
+        });
+    });
+  </script>
+</body>
+</html>
