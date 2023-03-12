@@ -11,6 +11,7 @@ Responsive design that works well on desktop and mobile devices
 Added a API so you can search for any recipe
 Added a rating system so user can give the recipe whatever rating they like
 Add user authentication with google sign in as well
+Added darkmode for the recipe detail section and made the css way better
 Technologies Used
 Html
 Css
